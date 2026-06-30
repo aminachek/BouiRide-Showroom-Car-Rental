@@ -1,0 +1,1039 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	background:rgba(0,0,0,.1);
+	padding: 10px 7%;	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index:1000;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}	
+
+.flex{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    margin: auto;
+}
+
+.logo{
+    font-size: 30px;
+	color: white;
+	font-weight: bolder;
+	text-decoration: none !important;
+	transition: all .42s;
+    left:-6%;
+}
+
+header .logo:hover{	
+    color:#4376AB !important;
+	
+	
+}
+.navbar a{
+	font-size: 1rem;
+    text-decoration: none;
+    margin: 0 1rem;
+    text-transform: uppercase;
+    color: white;
+    transition: all .42s;
+    font-weight: bolder;
+}
+
+.navbar a:hover{	
+    color:#4376AB !important;
+	
+}
+.navbar a:hover,
+header .icons i:hover {
+    color:#4376AB !important;
+    text-decoration: none;
+}
+.header .icons {
+    display: flex;
+}
+.header .icons i{
+    margin-left: 1.2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+header.sticky {
+    background-color: #4376AB; /* Changer la couleur du fond de la barre de navigation en noir */
+}
+
+header.sticky .navbar a {
+    color: white !important; /* Changer la couleur du texte des liens en bleu */
+}
+
+#menu-btn{
+    display: none;
+}
+.header .user-box{
+    position: absolute;
+    top: 120%;
+    right: 0rem;
+    background: rgba(255 255 255 /80%);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    padding:1rem;
+    text-align: center;
+    width: 30rem;
+    transform: scale(0);
+    transform-origin: top right;
+    line-height: 2;
+}
+.logout-btn{
+    width: 10rem;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bolder;
+    border: 1px solid ;
+    padding: 5px 15px;
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 5px;
+    transition: all .42s;
+    color: black;
+}
+.logout-btn:hover{
+    background-color:#4376AB;   
+
+}
+.header .user-box.active{
+    transform: scale(1.0);
+    transition: .2s linear;
+}
+.main{
+    width: 100%;
+    height: 66.5%;
+    display: flex;
+    align-items: center;
+    background-attachment: fixed;
+}
+
+
+/* Conteneur principal qui inclut la vidéo et les services */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Ajustements pour la vidéo */
+.main.banner video {
+    width: 100%; /* Assurez-vous que la vidéo remplit la largeur */
+    height: auto; /* Hauteur automatique pour maintenir le ratio */
+    z-index: -1;
+    object-fit: cover;
+}
+@media (min-aspect-ratio: 16/9){
+    .banner video{
+        width: 100%;
+        height: auto;
+    }
+    
+}
+.content{
+    
+    color: white;
+    position: absolute;
+    top: 40%;
+    left:5%;
+    font-size: 25px;
+    
+
+}
+.btn{
+    width: 300px;
+    padding: 20px;
+    margin: 50px ;
+    top: 20%;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 25px;
+    border: 2px solid;
+    cursor: pointer;
+    font-weight: 700;
+    background: transparent;
+    text-decoration: none;
+    color: white;
+}
+.btn:hover{
+    background: rgb(255, 255, 255,0.4);
+    transition: 0,5s;
+
+}
+
+.btn a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* section About Us css*/
+
+.heading{
+    text-align: center; 
+
+}
+.heading span{
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #4376AB;
+
+}
+.heading h1{
+    font-size: 2rem;
+    color: #4376AB;
+
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    height: auto;
+    width: 95%;
+    margin-top:10px;
+}
+
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about-img img {
+    flex: 1 1 21em; /* Adjusted width */
+    width: 500px;
+    height: auto;
+}
+
+.about-text {
+    flex: 1 ; /* Adjusted width */
+    font-family: 'Poppins' sans-serif;
+    text-align: justify;
+}
+.about-text span{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.about-text button.btn-About {
+    background-image: linear-gradient(to top, #00224E 0%, #4376AB 100%) !important;
+    color: #3d3535;
+    border: none;
+    font-size: 1.1rem;
+    width: 120px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 14px 0; /* Ajustez le padding verticalement pour centrer le texte */
+    border-radius: 20px;
+    align-items: center;
+    text-align: center; /* Centrez le texte horizontalement */
+    display: inline-block; 
+    margin-right: 5px;
+    margin-top: 20px;
+}
+
+.about-text button.btn-About a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+/*-----------------------------------*\
+            SERVICES
+\*-----------------------------------*/
+
+.services {
+    padding: 2px;
+    margin-top: 230px; /* Ajoutez un espace en haut pour séparer du titre */
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    width: 100%;
+}
+.services  .titre {
+    position: absolute; /* Sort le titre du flux normal et le positionne précisément */
+    /*top: 670px; /* Ajustez cette valeur pour le placer en haut de la page */
+    margin-top: -220px;
+    left: 50%; /* Centre le titre horizontalement */
+    transform: translateX(-50%); /* Assure que le titre est centré par rapport à sa propre largeur */
+    color: #A7001E;
+    z-index: 10; /* S'assure que le titre s'affiche au-dessus des autres éléments */
+}
+
+
+/* Ajustements pour chaque boîte de service */
+.services .row .box {
+    display: flex;
+    flex-direction: column; /* Changez la direction pour afficher verticalement */
+    align-items: center; /* Centre verticalement */
+    text-align: center; /* Centre le texte horizontalement */
+    gap: 10px; /* Ajoutez un espace entre les éléments */
+}
+
+
+.services .row .box div {
+    margin-left: 2rem;
+    text-align: justify;
+}
+
+/* Ajustements pour les titres h1 dans les boîtes */
+.services .row .box h1 {
+    font-size: 18px;
+    color: #555;
+    margin-top: 0.5rem; /* Ajoutez un espace en haut du titre h1 */
+    margin-bottom: .3rem;
+    text-align: center;
+}
+/* Ajustements pour les paragraphes dans les boîtes */
+.services .row .box p {
+    margin: 0 1rem; /* Ajoutez un espace autour du paragraphe pour une meilleure lisibilité */
+    text-align: center;
+}
+
+  /*-----------------------------------*\
+            MODELS
+\*-----------------------------------*/
+
+.models{
+
+    padding: 60px 0; 
+    background: #fff;
+   /* box-shadow: 0 5px 35px rgba(0,0,0,0.15);*/
+    margin-top: 50px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+
+}
+
+/* Styles pour la section "Popular Brands" */
+.popular-brands {
+    padding: 20px;
+    margin-top: 50px;
+  
+}
+
+.popular-brands h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4376AB;
+    font-weight: 500;
+}
+
+/* Styles pour les contrôles (flèches gauche et droite) */
+.control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.left,
+.right {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Styles pour le contenu des marques populaires */
+.popular-brands-content {
+    display: flex;
+   
+    justify-content: space-between;
+}
+
+.product-container {
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+}
+
+.product {
+    flex: 1 0 calc(33.333% - 20px);
+    margin: 0 10px;
+    margin-bottom: 20px;
+    /* Supprimer le cadre */
+    border: none;
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+
+
+
+.features{
+    display: flex;
+    justify-content: space-around;
+    /*margin-bottom: 1px;*/
+    /*margin-top: 5px;*/
+}
+.features span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*margin-bottom: 5px;*/
+    font-size: 12px;
+    margin-top: 10px;
+}
+.product .features span ion-icon {
+    padding-right: 0.3rem;
+  
+}
+.price {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+}
+
+.icon a {
+    margin-right: 10px;
+    color: #007bff;
+}
+.icon button {
+    text-transform: capitalize;
+    text-decoration: none;
+    margin-right: 10px;
+    color: #007bff;
+    background: transparent;
+    border: none;
+}
+
+
+
+
+/*-----------------------------------*\
+            CONTACT
+\*-----------------------------------*/
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    display: flex;
+}
+.form{
+    grid-area: form;
+}
+
+
+.contact{
+    padding: 40px  ;
+    background: #fff;
+    /*box-shadow: 0 4px 30px rgba(0,0,0,0.15);*/
+    display: flex; 
+    flex-direction: column; 
+    flex-wrap: wrap;
+
+}
+.contact.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:2rem ;
+}
+.contact .title h2{
+    background: #4376AB;
+    font-weight: 700;
+}
+
+.box{
+    padding: 20px;
+    overflow: hidden;
+    height: 100%;
+    width: 50%;
+    
+}
+
+.contact h3{
+    color: #00224E;    
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+.formBox{
+    position: relative;
+    width: 100%;
+
+}
+.formBox .row50{
+    display: flex;
+    gap: 20px;
+}
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.formBox .row100 .inputBox{
+    width: 100%;
+}
+.inputBox span{
+    color:#4376AB !important;
+    margin-top: 10px;
+    margin-bottom: 5px ;
+    font-weight: 700;
+}
+.inputBox input{
+    padding: 10px;
+    font-size: 1.1rem;
+    outline: none;
+    border: 1px solid #333;
+     display: flex;
+}
+.inputBox textarea {
+    padding: 10px;
+    font-size: 1.1rem;
+    outline: none;
+    border: 1px solid #333;
+    resize: none;
+    height: 200px; 
+    margin-bottom: 10px; 
+    
+}
+
+.button-area input[type=submit] {
+    background-image: linear-gradient(to top, #00224E 0%, #4376AB 100%) !important;
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+    width: 120px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 14px 0; 
+    border-radius: 20px;
+    align-items: center;
+    text-align: center; 
+    display: inline-block; 
+    margin-right: 5px;
+   
+}
+.button-message-container {
+    display: flex;
+    flex-direction: column;
+   /* align-items: center;*/
+    /*justify-content: center;*/
+}
+.button-area::placeholder{
+    color: #999 ;
+}
+.button-area {
+    margin-top: 7px; 
+}
+
+.button-area span{
+    color : #333;
+    font-size: 17px;
+    display: none; 
+}
+
+
+.map {
+  
+    width: 50%;
+    height: 33em;
+    /*display: flex; /* Ajout de cette ligne 
+    align-items: stretch; /* Ajout de cette ligne */
+    margin-top: 20px;
+ }
+ 
+ .map iframe {
+     width: 100%;
+     height: 100%;
+ }
+ 
+@media (max-width:991px){
+    
+     
+     .box{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 20rem !important;
+        grid-template-areas: 
+        "form"
+         ""
+         "map";
+     }
+     .map{
+        min-height: 300px;
+     }
+     .formBox.row50{
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+     }
+     .inputBox{
+        width: 100%;
+     }
+     .contact{
+        padding: 30px;
+     }
+     .map{
+        min-height: 300px;
+        padding: 0;
+     }
+}
+.status {
+    margin-left: 10px; /* ajustez selon vos besoins */
+    font-size: 14px; /* ajustez selon vos besoins */
+    display: none;
+}
+
+
+
+/*-----------------------------------*\
+            REVIEWS
+\*-----------------------------------*/
+
+.reviews{
+    margin-top: 60px;
+}
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 0;
+   
+}
+.card img { 
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4376AB;
+}
+.cards-wrapper .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 1px 4px 41px rgba(0,0,0,.1);
+    border-radius: 0.5rem;
+}
+.cards-wrapper .card .card-body h2{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.5rem;
+}
+.cards-wrapper .card .card-body .stars .fa-solid{
+    color: rgba(255, 213, 1, 0.858);
+
+}
+
+.carousel-inner {
+    padding: 1em;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #e1e1e1;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+    .card img {
+    height: 11em;
+    }
+}
+
+.card-body.stars .fa-solid{
+    color: rgba(255, 213, 1, 0.858);
+}
+
+
+/*******************CART*********************/
+.cart table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart .product-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cart th{
+    text-align: left;
+    padding: 5px 10px;
+    color: white;
+    background-color: #4376AB;
+}
+
+.cart td{
+    padding: 10px 20px;
+}
+.cart td img{
+    width: 120px;
+    height: 120px;
+    margin-right: 10px;
+}
+.cart-total{
+    display: flex;
+    justify-self: flex-end;
+    justify-content: flex-end;
+    
+}
+.cart-total table{
+    width: 100%;
+    max-width: 500px;
+    border-top: 3px solid #4376AB;
+
+}
+
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+
+
+
+.checkout-container{
+    display: flex;
+    justify-content: flex-end;
+}
+.checkout-btn{
+    padding: 15px;
+    width: 180px;
+    background-color: #4376AB;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 500;
+   
+}
+sup{
+    position: absolute;
+    top: 11%;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 15px;
+    text-align: center;
+    padding: .1rem;
+}
+/*******************Wishlist*********************/
+.wishlist table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.wishlist .product-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+.wishlist th{
+    text-align: left;
+    padding: 5px 10px;
+    color: white;
+    background-color: #4376AB;
+}
+.product-info {
+    display: flex; /* Utilisation de flexbox pour aligner les éléments horizontalement */
+    align-items: center; /* Alignement vertical au centre */
+}
+.wishlist td{
+    padding: 10px 20px;
+}
+.wishlist td img{
+    width: 120px;
+    height: 120px;
+    margin-right: 10px;
+}
+.wishlist_total{
+    max-width: 1000px;
+    height: 150px;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: 1px solid ;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 3rem 0;
+    line-height: 2;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+}
+.wishlist_total p{
+    font-size: 1.5rem;
+}
+.wishlist_total a{
+    text-transform: capitalize;
+    font-size:16px;
+    margin-right: 2rem;
+
+}
+.btn1{
+    width: 180px;
+    background-color: #4376AB;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid;
+    cursor: pointer;
+    background-color: #4376AB;
+    text-decoration: none;
+    color: white;
+}
+.btn1:hover{
+    background: rgb(255, 255, 255,0.4);
+    transition: 0,5s;
+}
+.disable{
+    pointer-events:none;
+    opacity: .5;
+}
+.btn3 {
+    margin-left: 20rem; /* Déplacer le bouton vers la droite */
+    width: 100px; /* Largeur du bouton */
+    background-color: #4376AB;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid;
+    background-color: #4376AB;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer  css*/
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+.pg-footer {
+    font-family: 'Roboto', sans-serif;
+    margin-top: auto;
+    
+}
+.footer {
+    /*background-color: ;*/
+    /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%);*/
+    /*background-image: linear-gradient(to top, #3C2113 0%, #785036 50%, #CBAB8E);*/
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+
+    color: #fff;
+    margin-top: 100px;
+}
+.footer-wave-svg {
+    background-color: transparent;
+    display: block;
+    height: 30px;
+    position: relative;
+    top: -1px;
+    width: 100%;
+}
+.footer-wave-path {
+    fill: #fffff2;
+}
+
+.footer-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1230px;
+    padding: 40px 15px 450px;
+    position: relative;
+}
+
+.footer-content-column {
+    box-sizing: border-box;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    color: #fff;
+}
+
+.single-footer{
+    width: 230px;
+}
+
+.single-footer h4{
+    text-transform: capitalize;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.footer-social a{
+color: #fff;
+border: 1px solid #fff;
+width: 40px;
+height: 40px;
+display: inline-block;
+text-align: center;
+line-height: 40px;
+border-radius: 50%;
+margin-right: 10px;
+}
+.footer-social{
+margin-top: 20px;
+
+}
+.single-footer ul{
+list-style: none;
+
+}
+.single-footer ul li{
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+.single-footer ul li a{ 
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: navajowhite;
+}
+.single-footer ul li a i{
+    position: absolute;
+    left: 0;
+    /*top: 0px;*/
+}
+  
+  
+.footer-copyright {
+    /*background-color: #faaca8;*/
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    color: #fff;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+.footer-copyright-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+.footer-copyright-text {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.footer-copyright-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+  /* Media Query For different screens */
+@media (min-width:320px) and (max-width:479px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+    .footer-content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1230px;
+        padding: 40px 15px 1050px;
+        position: relative;
+    }
+}
+@media (min-width:480px) and (max-width:599px)  { /* smartphones, Android phones, landscape iPhone */
+    .footer-content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1230px;
+        padding: 40px 15px 1050px;
+        position: relative;
+    }
+}
+  @media (min-width:600px) and (max-width: 800px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+    .footer-content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1230px;
+        padding: 40px 15px 1050px;
+        position: relative;
+    }
+}
+@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */  
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops *
+
+}
+@media (min-width:1281px) { /* hi-res laptops and desktops */  
+}  
+@media (min-width: 760px) {
+    .footer-content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1230px;
+        padding: 30px 10px 300px;
+        position: relative;
+    }
+
+    .footer-content-column {
+        width: 24.99%;
+    }
+}
